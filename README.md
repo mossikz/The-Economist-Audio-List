@@ -54,3 +54,9 @@ The online player stopped working because m4a files were removed. There's an awe
 ![screenshot](https://jingking.github.io/The-Economist-Audio-List/Find%20Edition.png)
 
 
+
+---
+
+## About this fork
+
+Fork of [jingking/The-Economist-Audio-List](https://github.com/jingking/The-Economist-Audio-List) (Apache-2.0). The original download method is discontinued. This fork keeps the historical edition data and does not replicate The Economist's private authentication. The signed-request workflow is disabled (`main.yml.disabled`). Automation here: weekly upstream sync and JSON validation.

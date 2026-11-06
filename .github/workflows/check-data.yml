@@ -1,0 +1,19 @@
+name: Check data files
+
+on:
+  schedule:
+    - cron: '0 10 * * 5'
+  workflow_dispatch:
+  push:
+    paths: ['*.json']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON files
+        run: |
+          for f in searchEditions*.json EditionsQuery.json; do
+            jq empty "$f" && echo "ok $f"
+          done
